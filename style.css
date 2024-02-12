@@ -1,0 +1,213 @@
+body {
+    height: 100vh;
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8237f;
+}
+
+/* card */
+
+.valentines-day-card {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    background-color: #0072c9;
+    overflow: hidden;
+    border: 10px solid rgb(12, 5, 8);
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgba(41, 23, 23, 0.4);
+}
+
+.valentines-day-card:before {
+    content: "";
+    position: absolute;
+    background-color: #96d8fb;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 140px;
+    left: -25px;
+    box-shadow: 60px 20px #96d8fb, 130px 10px #96d8fb, 190px 20px #96d8fb, 260px -5px #96d8fb, 340px 15px #96d8fb;
+}
+
+.valentines-day-card:after {
+    content: "";
+    position: absolute;
+    background-color: #bef1ff;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 160px;
+    left: -40px;
+    box-shadow: 50px 20px #bef1ff, 120px 40px #bef1ff, 200px 15px #bef1ff, 260px 30px #bef1ff, 330px 30px #bef1ff, 380px -10px #bef1ff;
+}
+
+.clouds {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+    border-radius: 100%;
+    background-color: #f7f9fa;
+    z-index: 5;
+    top: 240px;
+    left: -20px;
+    box-shadow: 55px 10px #f7f9fa, 125px 10px#f7f9fa, 175px 20px #f7f9fa, 250px 10px #f7f9fa, 320px 5px #f7f9fa, 380px -10px #f7f9fa;
+}
+
+/* hearts */
+
+.hearts {
+    position: absolute;
+    z-index: 2;
+}
+
+.heartOne {
+    position: absolute;
+    left: 100px;
+    top: 250px;
+    animation: upTwo 4s linear forwards 1s;
+}
+
+.heartTwo {
+    position: absolute;
+    left: 270px;
+    top: 230px;
+    animation: upTwo 5s linear forwards 1.8s;
+}
+
+.heartThree {
+    position: absolute;
+    left: 85px;
+    top: 415px;
+    animation: upTwo 5s linear forwards 3s;
+}
+
+.heartFour {
+    position: absolute;
+    left: 320px;
+    top: 380px;
+    animation: upTwo 9s linear forwards 3.5s;
+}
+
+.heartFive {
+    position: absolute;
+    left: 150px;
+    top: 400px;
+    animation: upTwo 13s linear forwards 4.5s;
+}
+
+.heartSix {
+    position: absolute;
+    left: 350px;
+    top: 500px;
+    animation: upTwo 16s linear forwards 5s;
+}
+
+.right-side:before, .right-side:after {
+    position: absolute;
+    content: "";
+    transform-origin: left;
+    animation: move 1s ease infinite;
+}
+
+.right-side:before {
+    border-radius: 50% 50% 50% 0;
+    width: 21px;
+    height: 20px;
+    background-color: #c9184a;
+    left: -0.26px;
+}
+
+.right-side:after {
+    height: 0;
+    width: 0;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #c9184a;
+    top: 19px;
+    left: -0.26px;
+}
+
+@keyframes move {
+    0%, 100% {transform: rotateY(-45deg);}
+}
+
+.left-side:before, .left-side:after {
+    position: absolute;
+    content: "";
+    transform-origin: right;
+    animation: move 1s ease infinite;
+}
+
+.left-side:before {
+    border-radius: 50% 50% 0 50%;
+    width: 20px;
+    height: 20px;
+    left: -20.7px;
+    background-color: #ff4d6d;
+}
+
+.left-side:after {
+    height: 0;
+    width: 0;
+    left: -15px;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid #ff4d6d;
+    top: 19px;
+}
+
+@keyframes up {
+    0% {transform: translateY(-200px);}
+    100% {transform: translateY(-200px);}
+}
+
+@keyframes upTwo {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-450px);}
+}
+
+/* style */
+
+.text {
+    position: center;
+    color: #0c0104;
+    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+    line-height: 1;
+    text-align: center;
+    width: 380px;
+    left: 10px;
+    z-index: 3;
+    top: 100px;
+    animation: up 2s ease forwards;
+    transition: .4s;
+}
+
+.hoverOne {
+    color: rgb(250, 247, 247);
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
+
+.hoverTwo {
+    color: rgb(43, 41, 41);
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    width: 380px;
+    left: 100px;
+    font-size: 20px;
+}
+
+.text:hover span {
+    display: none;
+}
+
+.text:hover:before {
+    content: "keep the spirit, keep smiling, and keep fighting and don't give up easily, Glorya";
+    font-size: 25x;
+}
+
+audio {
+    background-color: #1b1113;
+    position: center;
+}
